@@ -3,6 +3,11 @@ import '../styles/main.css';
 import iconChat from '../assets/icon-chat.png'
 import iconMoney from '../assets/icon-money.png'
 import iconSecurity from '../assets/icon-security.png'
+import FeatureItem from '../components/Feature-item';
+
+const FeatureInfos = require('../datas/features.json')
+console.log(FeatureInfos.chat.title)
+console.log(FeatureInfos.chat.text)
 
 export default function Home () {
 
@@ -19,8 +24,12 @@ export default function Home () {
           </div>
           <section className="features">
             <h2 className="sr-only">Features</h2>
-            <div className="feature-item">
-              <img src={iconChat} alt="Chat Icon" className="feature-icon" />
+            {/* <div className="feature-item">
+              <img 
+                src={iconChat} 
+                alt="Chat Icon" 
+                className="feature-icon" 
+              />
               <h3 className="feature-item-title">You are our #1 priority</h3>
               <p>
                 Need to talk to a representative? You can get in touch through our
@@ -30,7 +39,7 @@ export default function Home () {
             <div className="feature-item">
               <img
                 src={iconMoney}
-                alt="Chat Icon"
+                alt="Money Icon"
                 className="feature-icon"
               />
               <h3 className="feature-item-title">More savings means higher rates</h3>
@@ -41,7 +50,7 @@ export default function Home () {
             <div className="feature-item">
               <img
                 src={iconSecurity}
-                alt="Chat Icon"
+                alt="Security Icon"
                 className="feature-icon"
               />
               <h3 className="feature-item-title">Security you can trust</h3>
@@ -49,7 +58,10 @@ export default function Home () {
                 We use top of the line encryption to make sure your data and money
                 is always safe.
               </p>
-            </div>
+            </div> */}
+            <FeatureItem icon={iconChat} text={FeatureInfos.chat} />
+            <FeatureItem icon={iconMoney} text={FeatureInfos.money} />
+            <FeatureItem icon={iconSecurity} text={FeatureInfos.security} />
           </section>
         </main>
     )
