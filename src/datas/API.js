@@ -1,8 +1,6 @@
 import axios from 'axios';
 
-axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*';
-axios.defaults.baseURL = 'localhost:3001/api/v1';
-
+axios.defaults.baseURL = 'http://localhost:3001/api/v1';
 
 
 class CallAPI {
