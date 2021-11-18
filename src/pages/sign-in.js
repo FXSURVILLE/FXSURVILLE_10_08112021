@@ -31,8 +31,7 @@ class SignIn extends React.Component {
   handleSubmit (e) {
     e.preventDefault()
     const body = this.state
-    console.log(CallAPI.login(body))
-    console.log(body)
+    CallAPI.login(body).then(data=> console.log(data.data.body.token))
   }
 
   render() {
