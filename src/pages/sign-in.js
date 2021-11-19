@@ -15,6 +15,7 @@ function SignIn() {
   let passwordInput = React.createRef();
   const dispatch = useDispatch()
   const user = useSelector((state) => state.user.value)
+  console.log(user)
 
   return(
         <main className="main bg-dark">
@@ -50,7 +51,7 @@ function SignIn() {
         </main>
   )
 }
-console.log()
+
 // class SignIn extends React.Component {
 
 //   constructor (props) {

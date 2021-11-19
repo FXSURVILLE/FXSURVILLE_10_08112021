@@ -2,7 +2,7 @@ import { createSlice } from '@reduxjs/toolkit'
  
 const initialStateValue = { email: "", password: "" };
 
-export const UserSlice = createSlice({
+export const userSlice = createSlice({
     // le nom du slice
     name: "user",
     // le state initial
@@ -14,12 +14,17 @@ export const UserSlice = createSlice({
         // met en valeur ce qu'on a du payload
             state.value = action.payload
         },
+        // l'action logout
+        logout: (state) => {
+        // met en valeur la valeur initiale
+            state.value = initialStateValue
+        },
     },
 })
 
-export const {login} = UserSlice.actions
+export const {login, logout} = userSlice.actions
 
-export default UserSlice.reducer
+export default userSlice.reducer
 
 
 // import { useSelector } from "react-redux";
